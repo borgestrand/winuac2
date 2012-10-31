@@ -1,0 +1,7 @@
+DIRS=\
+	driver	\
+	cpl	\
+	svc	\
+	asiodll \
+	install
+

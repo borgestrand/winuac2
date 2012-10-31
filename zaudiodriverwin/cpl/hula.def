@@ -1,0 +1,6 @@
+LIBRARY emaud.cpl
+
+EXPORTS
+        DllMain
+        CPlApplet
+

@@ -1,0 +1,2 @@
+LIBRARY         emusba10.sys
+DESCRIPTION     'E-MU USB-Audio 1.0 Driver'

@@ -1,0 +1,78 @@
+#
+#   This file is part of the EMU CA0189 USB Audio Driver.
+#
+#   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+#
+#   This driver is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU Library General Public
+#   License as published by the Free Software Foundation; either
+#   version 2 of the License, or (at your option) any later version.
+#
+#   This driver is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public License
+#   along with this library.   If not, a copy of the GNU Lesser General Public 
+#   License can be found at <http://www.gnu.org/licenses/>.
+#
+TARGETNAME=emusba10
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+TARGETPATH=obj
+
+TARGETLIBS=\
+        $(DDK_LIB_PATH)\ks.lib\
+        $(DDK_LIB_PATH)\wdm.lib \
+        $(DDK_LIB_PATH)\ntoskrnl.lib \
+        $(DDK_LIB_PATH)\libcntpr.lib \
+        $(DDK_LIB_PATH)\usbd.lib \
+        $(DDK_LIB_PATH)\stdunk.lib \
+        $(DDK_LIB_PATH)\ksguid.lib \
+        ..\..\core\lib$(BUILD_ALT_DIR)\*\core.lib \
+        ..\..\filter\audio\lib$(BUILD_ALT_DIR)\*\audio.lib \
+        ..\..\filter\midi\lib$(BUILD_ALT_DIR)\*\midi.lib \
+        ..\..\filter\control\lib$(BUILD_ALT_DIR)\*\control.lib
+
+INCLUDES=\
+		$(DDK_INC_PATH); \
+		$(WDM_INC_PATH); \
+		..\..\include; \
+		..\..\core; \
+		..\..\..\include; \
+		..\..\..\..\include;
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+C_DEFINES=-D_WIN32 -DUNICODE -D_UNICODE -DUNDER_NT -DWINNT
+
+!IF $(386)
+BUFFER_OVERFLOW_CHECKS=1
+!ELSEIF $(AMD64)
+BUFFER_OVERFLOW_CHECKS=1
+!ENDIF
+
+DLLDEF=Hula.def
+
+LINKER_FLAGS=-map
+
+SOURCES=\
+	..\Guids.cpp		\
+        ..\KsAdapter.cpp     \
+        ..\Main.cpp    \
+        HulaVer.cpp	\
+        Hula.rc
+
+NTTARGETFILE0=\
+	clean	\
+	default
+
+#	chinese	\
+#	french	\
+#	german	\
+#	japanese	\
+#	portuguese	\
+#	spanish
+
+

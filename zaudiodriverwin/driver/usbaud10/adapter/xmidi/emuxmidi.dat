@@ -1,0 +1,4 @@
+[USB\VID_041E&PID_3F08.Midi.Topology]
+; EM8750 (XMidi2x2)
+;Split=1 ; Split the MIDI topology into individual cables.
+

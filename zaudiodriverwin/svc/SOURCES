@@ -1,0 +1,61 @@
+#
+#   This file is part of the EMU CA0189 USB Audio Driver.
+#
+#   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+#
+#   This driver is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU Library General Public
+#   License as published by the Free Software Foundation; either
+#   version 2 of the License, or (at your option) any later version.
+#
+#   This driver is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public License
+#   along with this library.   If not, a copy of the GNU Lesser General Public 
+#   License can be found at <http://www.gnu.org/licenses/>.
+#
+TARGETNAME=emaudsv
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+
+!IFDEF _NT_TARGET_VERSION_WINXP
+_NT_TARGET_VERSION=$(_NT_TARGET_VERSION_WINXP)
+!ENDIF
+
+
+TARGETLIBS=\
+        $(SDK_LIB_PATH)\kernel32.lib \
+        $(SDK_LIB_PATH)\user32.lib \
+        $(SDK_LIB_PATH)\shell32.lib \
+        $(SDK_LIB_PATH)\setupapi.lib \
+		$(SDK_LIB_PATH)\ole32.lib \
+
+INCLUDES=\
+		$(ATL_INC_PATH)\atl30; \
+		$(DDK_INC_PATH); \
+		..\include; 
+
+MSC_WARNING_LEVEL=$(MSC_WARNING_LEVEL) /WX
+
+UMTYPE=console
+
+LINKER_FLAGS=-map
+
+USE_MSVCRT=1
+
+SOURCES=\
+		dbg.cpp	\
+		AudioPropStoreWrapper.cpp  \
+		AudioPropStoreAPI.cpp  \
+		hula.cpp \
+        hula.rc
+
+NTTARGETFILE0=\
+	clean 
+
+
+
+

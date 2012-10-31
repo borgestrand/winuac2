@@ -1,0 +1,79 @@
+#/*
+#   This file is part of the EMU CA0189 USB Audio Driver.
+#
+#   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+#
+#   This driver is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU Library General Public
+#   License as published by the Free Software Foundation; either
+#   version 2 of the License, or (at your option) any later version.
+#
+#   This driver is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public License
+#   along with this library.   If not, a copy of the GNU Lesser General Public 
+#   License can be found at <http://www.gnu.org/licenses/>.
+#*/
+TARGETNAME=emasio
+TARGETPATH=obj
+TARGETTYPE=DYNLINK
+
+!IFDEF _NT_TARGET_VERSION_WINXP
+_NT_TARGET_VERSION=$(_NT_TARGET_VERSION_WINXP)
+!ENDIF
+
+TARGETLIBS=\
+        $(SDK_LIB_PATH)\ksuser.lib \
+        $(SDK_LIB_PATH)\kernel32.lib \
+        $(SDK_LIB_PATH)\user32.lib \
+        $(SDK_LIB_PATH)\gdi32.lib \
+        $(SDK_LIB_PATH)\advapi32.lib \
+        $(SDK_LIB_PATH)\ole32.lib \
+        $(SDK_LIB_PATH)\oleaut32.lib \
+        $(SDK_LIB_PATH)\uuid.lib \
+        $(SDK_LIB_PATH)\winmm.lib \
+        $(SDK_LIB_PATH)\setupapi.lib
+
+INCLUDES=\
+        $(MFC_INC_PATH); \
+        include; \
+        ..\include; 
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+C_DEFINES=-D_WIN32 -DWINDOWS -DIEEE754_64FLOAT=1
+
+LINKER_FLAGS=-map
+
+INDENTED_DIRECTIVES=1
+
+USE_MSVCRT=1
+
+DLLENTRY=_DllMainCRTStartup
+DLLBASE=0x2000000
+DLLDEF=asiodll.def
+
+SOURCES=\
+        dbg.cpp         \
+        stdunk.cpp      \
+        guids.cpp		\
+        factory.cpp		\
+        irptgt.cpp		\
+		node.cpp		\
+		pin.cpp			\
+		filter.cpp		\
+		audpin.cpp		\
+		audfilter.cpp	\
+		enum.cpp		\
+		asiocpl.cpp		\
+        asiodrv.cpp		\
+        asiodllver.cpp	\
+        asiodll.cpp     \
+        asiodll.rc
+
+NTTARGETFILE0=\
+		clean
+

@@ -1,0 +1,443 @@
+;
+;   This file is part of the EMU CA0189 USB Audio Driver.
+;
+;   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+;
+;   This driver is free software; you can redistribute it and/or
+;   modify it under the terms of the GNU Library General Public
+;   License as published by the Free Software Foundation; either
+;   version 2 of the License, or (at your option) any later version.
+;
+;   This driver is distributed in the hope that it will be useful,
+;   but WITHOUT ANY WARRANTY; without even the implied warranty of
+;   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;   Library General Public License for more details.
+;
+;   You should have received a copy of the GNU Library General Public License
+;   along with this library.   If not, a copy of the GNU Lesser General Public 
+;   License can be found at <http://www.gnu.org/licenses/>.
+;
+;-------------------------------------------------------------------------
+;
+; E-MU Systems.
+;     Copyright (c) E-MU Systems, 2004-2005.
+;
+; Description
+;     This inf file contains the following device for E-MU USB-Audio devices.
+;
+;  USB-Audio Devices: 
+;	-  USB\VID_xxxx&PID_yyyy&MI_zz
+;
+;  Modified Date: 19 July 2007
+;  Version: 1.2.0.02
+;
+;-------------------------------------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Class=MEDIA
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%EMU%
+DriverVer=07/19/2007, 6.0.01.0001
+CatalogFile=emaud.cat
+
+[Manufacturer]
+%MfgName%=EMU, NTAMD64, NTIA64
+
+;; Mechanism for excluding drivers from the "Add New Hardware" list.
+[ControlFlags]
+ExcludeFromSelect=*
+
+[EMU]
+; TODO: Remove the prototype & non E-mu ids before shipping.
+; Kahana prototype
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_FFFF&MI_00
+; Philips PSC805 
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0471&PID_0155&MI_00
+; ESI ROMI/O
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0A92&PID_1010&MI_00
+; KS550 (Sound Blaster Audigy External)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3060&MI_00
+; KS200 (Sound Blaster Digital Music SX)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3090&MI_00
+; Audigy 2 NX
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3020&MI_00
+; Xboard25
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F00&MI_00
+; Xboard49
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F01&MI_00
+; Xboard88
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F05&MI_00
+; Xboard61
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F06&MI_00
+; EM8740 (MicroPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F02&MI_00
+; EM8760 (SuperPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F03&MI_00
+; EM8761 (HulaPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F04&MI_00
+; EM8780 (XMidi1x1)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F07&MI_00
+; EM8750 (XMidi2x2)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F08&MI_00
+; EM8770 (XMidi5x5)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F09&MI_00
+
+[EMU.NTAMD64]
+; TODO: Remove the prototype & non E-mu ids before shipping.
+; Kahana prototype
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_FFFF&MI_00
+; Philips PSC805 
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0471&PID_0155&MI_00
+; ESI ROMI/O
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0A92&PID_1010&MI_00
+; KS550 (Sound Blaster Audigy External)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3060&MI_00
+; KS200 (Sound Blaster Digital Music SX)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3090&MI_00
+; Audigy 2 NX
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3020&MI_00
+; Xboard25
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F00&MI_00
+; Xboard49
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F01&MI_00
+; Xboard88
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F05&MI_00
+; Xboard61
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F06&MI_00
+; EM8740 (MicroPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F02&MI_00
+; EM8760 (SuperPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F03&MI_00
+; EM8761 (HulaPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F04&MI_00
+; EM8780 (XMidi1x1)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F07&MI_00
+; EM8750 (XMidi2x2)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F08&MI_00
+; EM8770 (XMidi5x5)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F09&MI_00
+
+[EMU.NTIA64]
+; TODO: Remove the prototype & non E-mu ids before shipping.
+; Kahana prototype
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_FFFF&MI_00
+; Philips PSC805 
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0471&PID_0155&MI_00
+; ESI ROMI/O
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_0A92&PID_1010&MI_00
+; KS550 (Sound Blaster Audigy External)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3060&MI_00
+; KS200 (Sound Blaster Digital Music SX)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3090&MI_00
+; Audigy 2 NX
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3020&MI_00
+; Xboard25
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F00&MI_00
+; Xboard49
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F01&MI_00
+; Xboard88
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F05&MI_00
+; Xboard61
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F06&MI_00
+; EM8740 (MicroPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F02&MI_00
+; EM8760 (SuperPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F03&MI_00
+; EM8761 (HulaPod)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F04&MI_00
+; EM8780 (XMidi1x1)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F07&MI_00
+; EM8750 (XMidi2x2)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F08&MI_00
+; EM8770 (XMidi5x5)
+%EMUSBA20.DeviceDesc%=EMUSBA20,USB\VID_041E&PID_3F09&MI_00
+
+[EMUSBA20.Interface.Audio]
+AddReg=EMUSBA20.Interface.Audio.AddReg
+
+[EMUSBA20.Interface.Audio.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%EMUSBA20.Audio.szPname%
+
+HKR,Dll\Register,,,"asio,legacy"
+HKR,Dll\Register,asio,,"11,,emasio.dll,0x40000002"
+HKR,Dll\Register,legacy,,"16425,,emasio.dll,0xC0000002"
+HKR,Dll\Unregister,,,"asio,legacy"
+HKR,Dll\Unregister,asio,,"11,,emasio.dll,0x40000002"
+HKR,Dll\Unregister,legacy,,"16425,,emasio.dll,0xC0000002"
+
+[EMUSBA20.Interface.Midi]
+AddReg=EMUSBA20.Interface.Midi.AddReg
+
+[EMUSBA20.Interface.Midi.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%EMUSBA20.Midi.szPname%
+
+[EMUSBA20.Interface.Control]
+AddReg=EMUSBA20.Interface.Control.AddReg
+
+[EMUSBA20.Interface.Control.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%EMUSBA20.Control.szPname%
+
+[EMUSBA20.AddReg]
+;; Usb audio specific registry update sutff
+HKR,,SetupPreferredAudioDevices,3,01,00,00,00
+HKR,,AssociatedFilters,,"wdmaud,redbook"
+HKR,,Driver,,emusba20.sys
+HKR,,NTMPDriver,,"emusba20.sys,sbemul.sys"
+
+HKR,,CLSID,,%Proxy.CLSID%
+
+HKR,Drivers,SubClasses,,"wave,midi,mixer,aux"
+
+HKR,Drivers\wave\wdmaud.drv, Driver,,wdmaud.drv
+HKR,Drivers\midi\wdmaud.drv,Driver,,wdmaud.drv
+HKR,Drivers\mixer\wdmaud.drv,Driver,,wdmaud.drv
+HKR,Drivers\aux\wdmaud.drv,Driver,,wdmaud.drv
+
+HKR,Drivers\wave\wdmaud.drv,Description,,%EMUSBA20.DeviceDesc%
+HKR,Drivers\midi\wdmaud.drv,Description,,%EMUSBA20.DeviceDesc%
+HKR,Drivers\mixer\wdmaud.drv,Description,,%EMUSBA20.DeviceDesc%
+HKR,Drivers\aux\wdmaud.drv,Description,,%EMUSBA20.DeviceDesc%
+
+;;HKR,Settings,SysExTimeOutPeriod,0x00010001,<TimeOutPeriodInMs>
+;;HKR,Settings,Synchronous,0x00010001,<0|1>
+
+HKR,Language,LANGID,,%LANGID%
+;;HKR,Language,LANGFILE,,%LANGFILE%
+
+HKR,Configuration,CFGFILE,,%EMUSBA20.CFGFILE%
+
+[EMAUD.CoInst.AddReg]
+HKR,,CoInstallers32,0x00010000,"emcoinst.dll,CoInstallerProc"
+
+[DestinationDirs]
+EMAUD.Cpl.CopyList        = 11    ; %SystemRoot%\System32
+EMAUD.Svc.CopyList        = 11    ; %SystemRoot%\System32
+EMAUD.Dll.CopyList        = 11    ; %SystemRoot%\System32
+EMAUD.Drv.CopyList        = 16425 ; %SystemRoot%\SysWow64
+EMAUD.CoInst.CopyList     = 11    ; %SystemRoot%\System32
+EMUSBA20.Drivers.CopyList = 12    ; %SystemRoot%\System32\Drivers
+
+; This corresponds each individual file to the disk ordinal
+; labeled above
+[SourceDisksNames]
+55=%StrDisk%,"",
+
+; This corresponds each individual file to the disk ordinal
+; labeled above
+[SourceDisksFiles.x86]
+emaud.cpl=55,i386
+emaudsv.exe=55,i386
+emasio.dll=55,i386
+emcoinst.dll=55,i386
+emusba20.sys=55,i386
+emusba20.dat=55
+usba20em.sys=55,i386
+
+[SourceDisksFiles.amd64]
+emaud.cpl=55,amd64
+emaudsv.exe=55,amd64
+emasio.dll=55,amd64
+emcoinst.dll=55,amd64
+emusba20.sys=55,amd64
+emusba20.dat=55
+emasio.drv=55,i386
+usba20em.sys=55,amd64
+
+[SourceDisksFiles.ia64]
+emaud.cpl=55,ia64
+emaudsv.exe=55,ia64
+emasio.dll=55,ia64
+emcoinst.dll=55,ia64
+emusba20.sys=55,ia64
+emusba20.dat=55
+emasio.drv=55,i386
+usba20em.sys=55,ia64
+
+[EMAUD.Cpl.CopyList]
+emaud.cpl
+
+[EMAUD.Svc.CopyList]
+emaudsv.exe
+
+[EMAUD.Dll.CopyList]
+emasio.dll
+
+[EMAUD.Drv.CopyList]
+emasio.dll,emasio.drv
+
+[EMAUD.CoInst.CopyList]
+emcoinst.dll
+
+[EMUSBA20.Drivers.CopyList]
+emusba20.sys
+emusba20.dat
+usba20em.sys
+
+;;**************** NT Install ****************
+
+[EMUSBA20.NTX86.CoInstallers]
+CopyFiles=EMAUD.CoInst.CopyList
+AddReg=EMAUD.CoInst.AddReg
+
+[EMUSBA20.NTAMD64.CoInstallers]
+CopyFiles=EMAUD.CoInst.CopyList
+AddReg=EMAUD.CoInst.AddReg
+
+[EMUSBA20.NTIA64.CoInstallers]
+CopyFiles=EMAUD.CoInst.CopyList
+AddReg=EMAUD.CoInst.AddReg
+
+[EMUSBA20.NTX86]
+Include=ks.inf, wdmaudio.inf
+Needs=KS.Registration, WDMAUDIO.Registration
+CopyFiles=EMUSBA20.Drivers.CopyList, EMAUD.Cpl.CopyList, EMAUD.Dll.CopyList, EMAUD.Svc.CopyList
+AddReg=EMUSBA20.AddReg
+
+[EMUSBA20.NTAMD64]
+Include=ks.inf, wdmaudio.inf
+Needs=KS.Registration, WDMAUDIO.Registration
+CopyFiles=EMUSBA20.Drivers.CopyList, EMAUD.Cpl.CopyList, EMAUD.Dll.CopyList, EMAUD.Svc.CopyList, EMAUD.Drv.CopyList
+AddReg=EMUSBA20.AddReg
+
+[EMUSBA20.NTIA64]
+Include=ks.inf, wdmaudio.inf
+Needs=KS.Registration, WDMAUDIO.Registration
+CopyFiles=EMUSBA20.Drivers.CopyList, EMAUD.Cpl.CopyList, EMAUD.Dll.CopyList, EMAUD.Svc.CopyList, EMAUD.Drv.CopyList
+AddReg=EMUSBA20.AddReg
+
+[EMUSBA20.NTX86.HW]
+AddReg=USBA20EM.AddReg.NTX86
+
+[EMUSBA20.NTAMD64.HW]
+AddReg=USBA20EM.AddReg.NTAMD64
+
+[EMUSBA20.NTIA64.HW]
+AddReg=USBA20EM.AddReg.NTIA64
+
+[USBA20EM.AddReg.NTX86]
+HKR,,"LowerFilters",0x00010000,"usba20em"
+
+[USBA20EM.AddReg.NTAMD64]
+HKR,,"LowerFilters",0x00010000,"usba20em"
+
+[USBA20EM.AddReg.NTIA64]
+HKR,,"LowerFilters",0x00010000,"usba20em"
+
+[EMUSBA20.NTX86.Interfaces]
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_AUDIO%,       	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_AUDIO%,      	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_AUDIO%,     	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIOCONTROL%,%KSNAME_AUDIO%,	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_MIDI%,       	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_MIDI%,      	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_MIDI%,     	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_MIDICONTROL%,%KSNAME_MIDI%,   	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_DEVICECONTROL%,%KSNAME_CTRL%,	EMUSBA20.Interface.Control
+
+[EMUSBA20.NTAMD64.Interfaces]
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_AUDIO%,       	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_AUDIO%,      	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_AUDIO%,     	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIOCONTROL%,%KSNAME_AUDIO%,	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_MIDI%,       	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_MIDI%,      	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_MIDI%,     	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_MIDICONTROL%,%KSNAME_MIDI%,   	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_DEVICECONTROL%,%KSNAME_CTRL%,	EMUSBA20.Interface.Control
+
+[EMUSBA20.NTIA64.Interfaces]
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_AUDIO%,       	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_AUDIO%,      	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_AUDIO%,     	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIOCONTROL%,%KSNAME_AUDIO%,	EMUSBA20.Interface.Audio
+AddInterface=%KSCATEGORY_AUDIO%,%KSNAME_MIDI%,       	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_RENDER%,%KSNAME_MIDI%,      	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_CAPTURE%,%KSNAME_MIDI%,     	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_MIDICONTROL%,%KSNAME_MIDI%,   	EMUSBA20.Interface.Midi
+AddInterface=%KSCATEGORY_DEVICECONTROL%,%KSNAME_CTRL%,	EMUSBA20.Interface.Control
+
+[EMUSBA20.NTX86.Services]
+DelService = hula
+DelService = hulasvc,   0x00000200
+AddService = emusba20,  0x00000002, EMUSBA20.Driver.Service
+AddService = emaudsv,,  EMAUD.Win32.Service
+AddService = usba20em,, USBA20EM.Driver.Service
+
+[EMUSBA20.NTAMD64.Services]
+DelService = hula
+DelService = hulasvc,   0x00000200
+AddService = emusba20,  0x00000002, EMUSBA20.Driver.Service
+AddService = emaudsv,,  EMAUD.Win32.Service
+AddService = usba20em,, USBA20EM.Driver.Service
+
+[EMUSBA20.NTIA64.Services]
+DelService = hula
+DelService = hulasvc,   0x00000200
+AddService = emusba20,  0x00000002, EMUSBA20.Driver.Service
+AddService = emaudsv,,  EMAUD.Win32.Service
+AddService = usba20em,, USBA20EM.Driver.Service
+
+[EMUSBA20.Driver.Service]
+DisplayName    = %EMUSBA20.Driver.DisplayName%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\emusba20.sys
+
+[EMAUD.Win32.Service]
+DisplayName    = %EMAUD.Win32.DisplayName%
+Description    = %EMAUD.Win32.Description%
+ServiceType    = 0x10	    	    ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %11%\emaudsv.exe
+Dependencies   = PlugPlay,RpcSs
+
+[USBA20EM.Driver.Service]
+DisplayName    = %USBA20EM.Driver.DisplayName%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\usba20em.sys
+
+;;**************** Strings ****************
+
+[Strings]
+; Configuration
+EMUSBA20.CFGFILE="\SystemRoot\system32\drivers\emusba20.dat"
+
+; Default language
+LANGID="0409" ; US English
+LANGFILE="\SystemRoot\system32\drivers\emlang.dat"
+
+; Localizable strings.
+EMU="E-MU Systems"
+StrDisk="E-MU Installer CD-ROM"
+MfgName="E-MU"
+
+EMUSBA20.DeviceDesc="E-MU USB-Audio/MIDI Device (Emulation)"
+EMUSBA20.Audio.szPname="E-MU Audio"
+EMUSBA20.Midi.szPname="E-MU MIDI"
+EMUSBA20.Control.szPname="E-MU Control"
+
+EMUSBA20.Driver.DisplayName = "E-MU USB-Audio 2.0 Driver"
+EMAUD.Win32.DisplayName = "E-MU Audio Service"
+EMAUD.Win32.Description = "Manages audio devices. If this service is stopped, audio devices and effects will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start."
+
+USBA20EM.Driver.DisplayName = "USB-Audio 2.0 Emulation Driver"
+
+; Non localizable strings.
+Proxy.CLSID              ="{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSCATEGORY_AUDIO         ="{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_RENDER        ="{65E8773E-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_CAPTURE       ="{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_AUDIOCONTROL  ="{4B8F9AFB-EE9F-4890-94EC-636414BD3768}"
+KSCATEGORY_MIDICONTROL   ="{83BDBE60-0C31-4634-9C95-F4DF21DEA769}"
+KSCATEGORY_DEVICECONTROL ="{50894FA4-9206-4a91-8728-CF6F268F271D}"
+KSNAME_AUDIO="Audio"
+KSNAME_MIDI="Midi"
+KSNAME_CTRL="Control"
+l"

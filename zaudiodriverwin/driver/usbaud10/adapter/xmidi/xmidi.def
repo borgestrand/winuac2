@@ -1,0 +1,2 @@
+LIBRARY         emuxmidi.sys
+DESCRIPTION     'E-MU USB XMIDI 1.0 Driver'

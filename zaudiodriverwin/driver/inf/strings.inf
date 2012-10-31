@@ -1,0 +1,33 @@
+;
+;   This file is part of the EMU CA0189 USB Audio Driver.
+;
+;   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+;
+;   This driver is free software; you can redistribute it and/or
+;   modify it under the terms of the GNU Library General Public
+;   License as published by the Free Software Foundation; either
+;   version 2 of the License, or (at your option) any later version.
+;
+;   This driver is distributed in the hope that it will be useful,
+;   but WITHOUT ANY WARRANTY; without even the implied warranty of
+;   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;   Library General Public License for more details.
+;
+;   You should have received a copy of the GNU Library General Public License
+;   along with this library.   If not, a copy of the GNU Lesser General Public 
+;   License can be found at <http://www.gnu.org/licenses/>.
+;
+; Configuration
+EMUSBA10.CFGFILE="\SystemRoot\system32\drivers\emusba10.dat"
+
+; Non localizable strings.
+Proxy.CLSID					="{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSCATEGORY_AUDIO			="{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_RENDER			="{65E8773E-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_CAPTURE			="{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_AUDIOCONTROL		="{4B8F9AFB-EE9F-4890-94EC-636414BD3768}"
+KSCATEGORY_MIDICONTROL		="{83BDBE60-0C31-4634-9C95-F4DF21DEA769}"
+KSCATEGORY_DEVICECONTROL	="{50894FA4-9206-4a91-8728-CF6F268F271D}"
+KSNAME_AUDIO="Audio"
+KSNAME_MIDI="Midi"
+KSNAME_CTRL="Control"

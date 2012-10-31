@@ -1,0 +1,6 @@
+LIBRARY  emcoinst
+
+EXPORTS   
+   CoInstallerProc 
+
+   

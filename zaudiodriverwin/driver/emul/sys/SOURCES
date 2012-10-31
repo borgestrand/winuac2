@@ -1,0 +1,61 @@
+#/*
+#   This file is part of the EMU CA0189 USB Audio Driver.
+#
+#   Copyright (C) 2008 EMU Systems/Creative Technology Ltd. 
+#
+#   This driver is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU Library General Public
+#   License as published by the Free Software Foundation; either
+#   version 2 of the License, or (at your option) any later version.
+#
+#   This driver is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public License
+#   along with this library.   If not, a copy of the GNU Lesser General Public 
+#   License can be found at <http://www.gnu.org/licenses/>.
+#*/
+
+TARGETNAME=usba20em
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+
+TARGETLIBS=\
+        $(DDK_LIB_PATH)\ks.lib\
+        $(DDK_LIB_PATH)\wdm.lib \
+        $(DDK_LIB_PATH)\ntoskrnl.lib \
+        $(DDK_LIB_PATH)\libcntpr.lib \
+        $(DDK_LIB_PATH)\usbd.lib \
+        $(DDK_LIB_PATH)\stdunk.lib \
+        $(DDK_LIB_PATH)\ksguid.lib
+
+INCLUDES=\
+		..;
+		
+C_DEFINES= $(C_DEFINES)  -DDEVICE_LOWER=1
+
+MSC_WARNING_LEVEL=-W3 -WX
+
+SOURCES=\
+	..\entity.cpp \
+	..\clock.cpp \
+	..\unit.cpp \
+	..\terminal.cpp \
+	..\element.cpp \
+	..\jack.cpp \
+	..\acintep.cpp \
+	..\asfbep.cpp \
+	..\asdatep.cpp \
+	..\msdatep.cpp \
+	..\aci.cpp \
+	..\asi.cpp \
+	..\msi.cpp \
+	..\interface.cpp \
+	..\config.cpp \
+	..\utils.cpp \
+	device.cpp \
+	filter.cpp \
+	filter.rc
+

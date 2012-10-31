@@ -1,0 +1,5 @@
+-manifest %HULAROOT%\bin\win\scripts\xmidi.wdm.manifest
+-install %HULAROOT%\package\xmidi\install
+-symbols %HULAROOT%\package\xmidi\symbol
+-set XMIDI=1
+%HULAROOT%

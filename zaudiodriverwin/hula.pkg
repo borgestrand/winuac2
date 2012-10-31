@@ -1,0 +1,4 @@
+-manifest %HULAROOT%\bin\win\scripts\package.wdm.manifest
+-install %HULAROOT%\package\hula\install
+-symbols %HULAROOT%\package\hula\symbol
+%HULAROOT%

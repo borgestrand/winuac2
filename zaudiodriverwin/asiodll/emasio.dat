@@ -1,0 +1,54 @@
+[USB\VID_041E&PID_3F02.Audio.ChannelNames]
+; EM8740 (MicroPod)
+00-00="Analog IN A"
+00-01="Analog IN B"
+01-00="Analog OUT"
+01-01="Analog OUT"
+
+[USB\VID_041E&PID_3F04.Audio.ChannelNames]
+; EM8761 (HulaPod)
+00-00="Analog IN A"
+00-01="Analog IN B"
+00-02="SPDIF IN L"
+00-03="SPDIF IN R"
+01-00="Analog OUT"
+01-01="Analog OUT"
+01-02="SPDIF OUT"
+01-03="SPDIF OUT"
+
+[USB\VID_041E&PID_3F0A.Audio.ChannelNames]
+; Tracker Preamp
+00-00="Mic In A"
+00-01="Min In B"
+01-00="Analog Out"
+01-01="Analog Out"
+
+[USB\VID_041E&PID_3F02.Audio.BufferSize]
+; EM8740 (MicroPod)
+ArrayOffset=7
+
+[USB\VID_041E&PID_3F04.Audio.BufferSize]
+; EM8761 (HulaPod)
+ArrayOffset=7
+
+[USB\VID_041E&PID_3F0A.Audio.BufferSize]
+; Tracker Preamp
+ArrayOffset=7
+
+[USB\VID_041E&PID_3F02.Audio.Options]
+; EM8740 (MicroPod)
+Sync=3
+
+[USB\VID_041E&PID_3F04.Audio.Options]
+; EM8761 (HulaPod)
+Sync=3
+
+[USB\VID_041E&PID_3F0A.Audio.Options]
+; Tracker Preamp
+Sync=3
+
+[AppHacks.Live 5.2]
+EnableResyncRequest=0
+
+[AppHacks.Live 4.1.5]
+EnableResyncRequest=0

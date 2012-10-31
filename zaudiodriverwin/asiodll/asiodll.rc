@@ -1,0 +1,203 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,0,1,1
+ PRODUCTVERSION 1,2,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "For use with WDM/KS audio drivers."
+            VALUE "CompanyName", "E-MU Systems"
+            VALUE "FileDescription", "E-MU ASIO Driver"
+            VALUE "FileVersion", "6.00.01.0001-1.02.0520"
+            VALUE "InternalName", "emasio"
+            VALUE "LegalCopyright", "Copyright© 1997-2005 E-MU Systems"
+            VALUE "LegalTrademarks", "ASIO is a trademark of Steinberg Soft- und Hardware GmbH"
+            VALUE "OriginalFilename", "emasio.dll"
+            VALUE "ProductName", "E-MU Audio Product"
+            VALUE "ProductVersion", "1.02.00.0002"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ASIOLOGO            BITMAP                  "asio.bmp"
+IDB_CREATIVE            BITMAP                  "creative.bmp"
+IDB_EMU                 BITMAP                  "emu.bmp"
+IDB_ASIO_CREATIVE       BITMAP                  "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOGASIOWARNING DIALOGEX 0, 0, 241, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "CTLOCSTR_AsioWarningDialogTitle"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,96,74,50,14
+    CTEXT           "CTLOCSTR_AsioWarning\nCTLOCSTR_AsioWarning\nCTLOCSTR_AsioWarning",
+                    IDC_ASIOWARNING,7,40,227,29,SS_SUNKEN
+    CONTROL         101,IDC_BITMAP,"Static",SS_BITMAP,94,7,54,28,
+                    WS_EX_DLGMODALFRAME
+END
+
+IDD_ASIOCP_TITANIUM DIALOGEX 0, 0, 192, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_POPUP | WS_CAPTION
+CAPTION "CTLOCSTR_ASIOControlPanel"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "CTLOCSTR_OK",IDC_OK,144,37,44,13
+    PUSHBUTTON      "CTLOCSTR_Cancel",IDC_CANCEL,144,57,44,13
+    CONTROL         118,IDC_ASIOLOGO,"Static",SS_BITMAP,68,7,54,20,
+                    WS_EX_DLGMODALFRAME
+    COMBOBOX        IDC_COMBOLATENCIES,61,45,68,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "CTLOCSTR_Preferences",IDC_PREFERENCES,7,33,128,53,
+                    BS_LEFT
+    CONTROL         119,IDC_CTLOGO,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_BORDER,137,103,51,10
+    LTEXT           "=o= hyhuang@atc.creative.com =o=",IDC_AUTHOR,9,104,116,
+                    8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBOBITDEPTHS,61,65,68,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "CTLOCSTR_Buffer Size",IDC_BUFFERSIZE,11,47,43,10
+    LTEXT           "CTLOCSTR_Bit Depth",IDC_BITDEPTH,11,69,44,10
+    CONTROL         "CTLOCSTR_PerApplicationPreferences",
+                    IDC_PERAPPLICATIONPREFERENCES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,91,125,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOGASIOWARNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    "IDD_ASIOCP_TITANIUM", DIALOG
+    BEGIN
+        RIGHTMARGIN, 188
+        BOTTOMMARGIN, 113
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_DLLFILENAME         "emasio.dll"
+    IDS_OK                  "OK"
+    IDS_CANCEL              "Cancel"
+    IDS_PREFERENCES         "Preferences"
+    IDS_BUFFERSIZE          "Buffer Size:"
+    IDS_BITDEPTH            "Bit Depth:"
+    IDS_PERAPPLICATIONPREFERENCES "Per Application Preferences"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+DIO_INVOKED
+
