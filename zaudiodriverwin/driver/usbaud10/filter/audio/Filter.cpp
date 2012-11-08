@@ -1076,7 +1076,8 @@ ValidateFormat
                                         case WAVE_FORMAT_EXTENSIBLE:
                                         {
 											//[NI Tao]if WDM stream, priority is set to LOW
-											m_UsePreferredSampleRate = TRUE;
+											//Nikolay
+											//m_UsePreferredSampleRate = TRUE;
 											//end
 											
 											if ((waveFormat->wBitsPerSample / 8 * waveFormat->nChannels) == waveFormat->nBlockAlign/*PACKED*/)

@@ -2134,7 +2134,7 @@ InstallFilterFactories
 			);
 		}
 	}
-
+#ifdef MIDI_INTERFACE
 	// Install MIDI filters, if any.
 	if (m_MidiDevice)
 	{
@@ -2211,6 +2211,7 @@ InstallFilterFactories
 			i++;
 		}
 	}
+#endif //MIDI_INTERFACE
 
 	// Install a private filter for supporting private IKsPropertySet.
 	CreateControlFilterFactory
