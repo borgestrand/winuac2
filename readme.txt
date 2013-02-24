@@ -37,14 +37,14 @@ configuration of your test computer. CD to the correct folder and give the
 command "build". You probably want to run all these programs as Administrator.
 
 Copy the resulting .sys file to the test computer's hard drive. Browse to it in
-the Driver Loader. Start DebugVeiw with the Capturre Kernel option enabled. In
+the Driver Loader. Start DebugVeiw with the Capture Kernel option enabled. In
 Driver Loader ensure that start="Demand", then register and start the driver
 service. Hope and pray that your test computer doesn't blue-screen!
 
-After a re-build you must stop and the driver, copy in the new .sys file and
-start the service again. It doesn't seem like you have to unregister and 
-register the service again. Only tested on a driver consisting of a single
-.sys file.
+After a re-build you must stop the driver, copy in the new .sys file and start
+the service again. It doesn't seem like you have to unregister and  register
+the service again. But that's only tested on a simple driver consisting of a 
+single .sys file.
 
 
 Documentation
