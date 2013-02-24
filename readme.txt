@@ -27,6 +27,9 @@ IMPORTANT: DebugView -> Capture -> Capture Kernel
 Driver loader, use the WLH (Vista) build on Windows 7 of:
   http://www.osronline.com/article.cfm?article=157 
 
+OSR Test System Configuration Utility:
+  http://www.osronline.com/article.cfm?article=537
+
 To build a driver, use a checked build environment corresponding to the 
 configuration of your test computer. CD to the correct folder and give the 
 command "build". You probably want to run all these programs as Administrator.
