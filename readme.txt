@@ -23,6 +23,8 @@ For debug setup see
 Use DebugView, download from
   http://download.cnet.com/DebugView/3000-2218_4-10213957.html
 IMPORTANT: DebugView -> Capture -> Capture Kernel
+To enable debug messages to appear in Windows, import debugview.reg into the
+registry on your test computer and reboot it. 
 
 Driver loader, use the WLH (Vista) build on Windows 7 of:
   http://www.osronline.com/article.cfm?article=157 
