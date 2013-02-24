@@ -34,7 +34,7 @@ command "build". You probably want to run all these programs as Administrator.
 Copy the resulting .sys file to the test computer's hard drive. Browse to it in
 the Driver Loader. Start DebugVeiw with the Capturre Kernel option enabled. In
 Driver Loader ensure that start="Demand", then register and start the driver
-service. 
+service. Hope and pray that your test computer doesn't blue-screen!
 
 After a re-build you must stop and the driver, copy in the new .sys file and
 start the service again. It doesn't seem like you have to unregister and 
